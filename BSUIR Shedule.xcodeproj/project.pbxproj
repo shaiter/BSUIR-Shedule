@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		1706610E207E1F3700F8C683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706610D207E1F3700F8C683 /* AppDelegate.swift */; };
-		17066110207E1F3700F8C683 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706610F207E1F3700F8C683 /* ViewController.swift */; };
+		17066110207E1F3700F8C683 /* StudentsScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706610F207E1F3700F8C683 /* StudentsScheduleTableViewController.swift */; };
 		17066113207E1F3700F8C683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17066111207E1F3700F8C683 /* Main.storyboard */; };
 		17066115207E1F3900F8C683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17066114207E1F3900F8C683 /* Assets.xcassets */; };
 		17066118207E1F3900F8C683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17066116207E1F3900F8C683 /* LaunchScreen.storyboard */; };
+		17066120207E1FCB00F8C683 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706611F207E1FCB00F8C683 /* Subject.swift */; };
+		171474C420AC009800340F0D /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171474C320AC009800340F0D /* Weekday.swift */; };
+		17D0FC3D20AAC1D700414B8B /* StudentsSchaduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0FC3C20AAC1D700414B8B /* StudentsSchaduleTableViewCell.swift */; };
+		17D0FC3F20AAC6B200414B8B /* JSONStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0FC3E20AAC6B200414B8B /* JSONStructure.swift */; };
+		17D0FC4120AAC7DC00414B8B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0FC4020AAC7DC00414B8B /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1706610A207E1F3700F8C683 /* BSUIR Shedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BSUIR Shedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1706610D207E1F3700F8C683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1706610F207E1F3700F8C683 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1706610F207E1F3700F8C683 /* StudentsScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsScheduleTableViewController.swift; sourceTree = "<group>"; };
 		17066112207E1F3700F8C683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17066114207E1F3900F8C683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17066117207E1F3900F8C683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17066119207E1F3900F8C683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1706611F207E1FCB00F8C683 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		171474C320AC009800340F0D /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
+		17D0FC3C20AAC1D700414B8B /* StudentsSchaduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsSchaduleTableViewCell.swift; sourceTree = "<group>"; };
+		17D0FC3E20AAC6B200414B8B /* JSONStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStructure.swift; sourceTree = "<group>"; };
+		17D0FC4020AAC7DC00414B8B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,42 @@
 			isa = PBXGroup;
 			children = (
 				1706610D207E1F3700F8C683 /* AppDelegate.swift */,
-				1706610F207E1F3700F8C683 /* ViewController.swift */,
+				171474C220AC003A00340F0D /* Models */,
+				171474C520AC021B00340F0D /* View */,
+				171474C620AC024800340F0D /* Controllers */,
 				17066111207E1F3700F8C683 /* Main.storyboard */,
 				17066114207E1F3900F8C683 /* Assets.xcassets */,
 				17066116207E1F3900F8C683 /* LaunchScreen.storyboard */,
 				17066119207E1F3900F8C683 /* Info.plist */,
 			);
 			path = "BSUIR Shedule";
+			sourceTree = "<group>";
+		};
+		171474C220AC003A00340F0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17D0FC3E20AAC6B200414B8B /* JSONStructure.swift */,
+				1706611F207E1FCB00F8C683 /* Subject.swift */,
+				171474C320AC009800340F0D /* Weekday.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		171474C520AC021B00340F0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17D0FC3C20AAC1D700414B8B /* StudentsSchaduleTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		171474C620AC024800340F0D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1706610F207E1F3700F8C683 /* StudentsScheduleTableViewController.swift */,
+				17D0FC4020AAC7DC00414B8B /* DataManager.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17066110207E1F3700F8C683 /* ViewController.swift in Sources */,
+				17066110207E1F3700F8C683 /* StudentsScheduleTableViewController.swift in Sources */,
+				171474C420AC009800340F0D /* Weekday.swift in Sources */,
+				17D0FC4120AAC7DC00414B8B /* DataManager.swift in Sources */,
+				17066120207E1FCB00F8C683 /* Subject.swift in Sources */,
+				17D0FC3F20AAC6B200414B8B /* JSONStructure.swift in Sources */,
+				17D0FC3D20AAC1D700414B8B /* StudentsSchaduleTableViewCell.swift in Sources */,
 				1706610E207E1F3700F8C683 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
