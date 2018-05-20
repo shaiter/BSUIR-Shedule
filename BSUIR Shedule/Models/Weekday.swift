@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Weekday: NSObject {
+class Weekday {
     
     var title: String
     var subjects: [Subject]
@@ -16,6 +16,5 @@ class Weekday: NSObject {
     init(title: String, subjects: [Subject]) {
         self.title = title
         self.subjects = subjects
-        super.init()
     }
 }

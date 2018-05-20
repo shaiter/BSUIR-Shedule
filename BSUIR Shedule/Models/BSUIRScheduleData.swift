@@ -8,7 +8,24 @@
 
 import Foundation
 
-class DataManager {
+class BSUIRScheduleData {
+    
+    static let lessonTimes = ["08:00 - 09:35",
+                              "09:45 - 11:20",
+                              "11:40 - 13:15",
+                              "13:25 - 15:00",
+                              "15:20 - 16:55",
+                              "17:05 - 18:40",
+                              "18:45 - 20:20",
+                              "20:25 - 22:00"]
+    
+    
+    
+    
+    
+    
+    
+    
     
 //    func getData() {
 //        let urlString = "https://students.bsuir.by/api/v1/studentGroup/schedule?studentGroup=651005"

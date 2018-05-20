@@ -8,21 +8,23 @@
 
 import UIKit
 
-class Subject: NSObject {
-    var title: String?
-    var auditory: [String]?
-    var time: String?
-    var employee: String?
-    var photoURL: String?
+class Subject {
+    var title: String
+    var auditory: String
+    var time: String
+    var employee: String
     var photo: UIImage = #imageLiteral(resourceName: "kon'")
+    var weekNumber : [Int]
+    var subgroup: Int
     
     
-    init(title: String?, auditory: [String]?, time: String?, employee: String?, photoURL: String?) {
+    
+    init(title: String, auditory: String, time: String, employee: String, weekNumber: [Int], subgroup: Int) {
         self.title = title
         self.auditory = auditory
         self.time = time
-        self.photoURL = photoURL
         self.employee = employee
-        super.init()
+        self.weekNumber = weekNumber
+        self.subgroup = subgroup
     }
 }
