@@ -18,5 +18,32 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "DetaleStudentsScheduleTableViewController.updateSaveButtonState():DetaleStudentsScheduleTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "numSubgroup">
+            </PersistentString>
+            <PersistentString
+               value = "weekNumber">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddNewScheduleViewController.viewDidLoad():AddNewScheduleViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "schedules">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StudentsScheduleViewController.unwindToSchedule(sender:):StudentsScheduleViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "schedule">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

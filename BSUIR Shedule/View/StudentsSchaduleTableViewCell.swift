@@ -16,6 +16,7 @@ class StudentsSchaduleTableViewCell: UITableViewCell {
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var weekNumber: UILabel!
     @IBOutlet weak var subgroup: UILabel!
+    @IBOutlet weak var lessonType: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +25,6 @@ class StudentsSchaduleTableViewCell: UITableViewCell {
     }
     
     var subject: Subject?
-    
-        
         {
         didSet{
             self.updateUI()
@@ -36,25 +35,27 @@ class StudentsSchaduleTableViewCell: UITableViewCell {
         self.title.text = subject?.title
         self.auditory.text = subject?.auditory
         self.lessonTime.text = subject?.time
-        self.photo.image = subject?.photo
-        if subject?.weekNumber[0] == 0 {
-            self.weekNumber.text = "1,2,3,4"
+        if subject!.teachers.count > 0 {
+            self.photo.image = subject?.teachers[0].photo
         } else {
-            var weeks = ""
-            for weekNumber in (subject?.weekNumber)! {
-                weeks += String(weekNumber)
-            }
-            self.weekNumber.text = weeks
+            self.photo.isHidden = true
         }
         
+        var weeks = ""
+        for weekNumber in (subject?.weekNumber)! {
+            weeks += String(weekNumber)
+        }
+        self.weekNumber.text = weeks
+        switch subject?.subjectType {
+        case "ЛК": lessonType.image = #imageLiteral(resourceName: "green")
+        case "ПЗ": lessonType.image = #imageLiteral(resourceName: "yellow")
+        case "ЛР": lessonType.image = #imageLiteral(resourceName: "red")
+        default: lessonType.image = #imageLiteral(resourceName: "yellow")
+        }
         if !(subject?.subgroup == 0) {
-            
-            
             if let subgroup = subject?.subgroup {
                 self.subgroup.text = String(subgroup)
             }
-            
-            
         } else {
             self.subgroup.text = ""
         }

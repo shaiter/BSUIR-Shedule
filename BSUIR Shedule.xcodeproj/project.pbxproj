@@ -9,31 +9,66 @@
 /* Begin PBXBuildFile section */
 		1706610E207E1F3700F8C683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706610D207E1F3700F8C683 /* AppDelegate.swift */; };
 		17066113207E1F3700F8C683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17066111207E1F3700F8C683 /* Main.storyboard */; };
-		17066115207E1F3900F8C683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17066114207E1F3900F8C683 /* Assets.xcassets */; };
 		17066118207E1F3900F8C683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17066116207E1F3900F8C683 /* LaunchScreen.storyboard */; };
 		17066120207E1FCB00F8C683 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1706611F207E1FCB00F8C683 /* Subject.swift */; };
 		171474C420AC009800340F0D /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171474C320AC009800340F0D /* Weekday.swift */; };
 		1719FE9720B15B71007FBAB0 /* StudentsScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1719FE9620B15B71007FBAB0 /* StudentsScheduleViewController.swift */; };
+		172045C620B9BF4600DD71D6 /* SubgroupSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172045C520B9BF4600DD71D6 /* SubgroupSelectionViewController.swift */; };
+		172045C820BAC4BF00DD71D6 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172045C720BAC4BF00DD71D6 /* Teacher.swift */; };
+		17399E1120B442F4004BD921 /* StudentsSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17399E1020B442F4004BD921 /* StudentsSettingsTableViewCell.swift */; };
+		17399E1320B44AA7004BD921 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17399E1220B44AA7004BD921 /* SettingsViewController.swift */; };
+		17399E1720B542E9004BD921 /* StudentsSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17399E1620B542E9004BD921 /* StudentsSchedule.swift */; };
+		17399E1920B54F12004BD921 /* AddNewScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17399E1820B54F12004BD921 /* AddNewScheduleViewController.swift */; };
+		17399E1B20B57884004BD921 /* AddNewScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17399E1A20B57884004BD921 /* AddNewScheduleTableViewCell.swift */; };
+		1746CF4C20BDC5E700D3E168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1746CF4B20BDC5E600D3E168 /* Assets.xcassets */; };
 		17893DD720B02D210028A520 /* DetaleStudentsScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17893DD620B02D210028A520 /* DetaleStudentsScheduleTableViewController.swift */; };
+		17CFC5C520BB18430021F5F8 /* Pods_BSUIR_Shedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CFC5C420BB18430021F5F8 /* Pods_BSUIR_Shedule.framework */; };
+		17CFC5C620BB18430021F5F8 /* Pods_BSUIR_Shedule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17CFC5C420BB18430021F5F8 /* Pods_BSUIR_Shedule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		17D0FC3D20AAC1D700414B8B /* StudentsSchaduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0FC3C20AAC1D700414B8B /* StudentsSchaduleTableViewCell.swift */; };
 		17D0FC3F20AAC6B200414B8B /* JSONStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0FC3E20AAC6B200414B8B /* JSONStructure.swift */; };
-		17D0FC4120AAC7DC00414B8B /* BSUIRScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0FC4020AAC7DC00414B8B /* BSUIRScheduleData.swift */; };
+		17D0FC4120AAC7DC00414B8B /* BSUIRSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0FC4020AAC7DC00414B8B /* BSUIRSchedule.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17CFC5C020BB17FB0021F5F8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17CFC5C620BB18430021F5F8 /* Pods_BSUIR_Shedule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1706610A207E1F3700F8C683 /* BSUIR Shedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BSUIR Shedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1706610D207E1F3700F8C683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17066112207E1F3700F8C683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		17066114207E1F3900F8C683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17066117207E1F3900F8C683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17066119207E1F3900F8C683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1706611F207E1FCB00F8C683 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		171474C320AC009800340F0D /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
 		1719FE9620B15B71007FBAB0 /* StudentsScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsScheduleViewController.swift; sourceTree = "<group>"; };
+		172045C520B9BF4600DD71D6 /* SubgroupSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubgroupSelectionViewController.swift; sourceTree = "<group>"; };
+		172045C720BAC4BF00DD71D6 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		17399E1020B442F4004BD921 /* StudentsSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		17399E1220B44AA7004BD921 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		17399E1620B542E9004BD921 /* StudentsSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsSchedule.swift; sourceTree = "<group>"; };
+		17399E1820B54F12004BD921 /* AddNewScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewScheduleViewController.swift; sourceTree = "<group>"; };
+		17399E1A20B57884004BD921 /* AddNewScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		1746CF4B20BDC5E600D3E168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17893DD620B02D210028A520 /* DetaleStudentsScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaleStudentsScheduleTableViewController.swift; sourceTree = "<group>"; };
+		17CFC5B820BB175E0021F5F8 /* Pods_BSUIR_Shedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BSUIR_Shedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17CFC5C420BB18430021F5F8 /* Pods_BSUIR_Shedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BSUIR_Shedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D0FC3C20AAC1D700414B8B /* StudentsSchaduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsSchaduleTableViewCell.swift; sourceTree = "<group>"; };
 		17D0FC3E20AAC6B200414B8B /* JSONStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStructure.swift; sourceTree = "<group>"; };
-		17D0FC4020AAC7DC00414B8B /* BSUIRScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSUIRScheduleData.swift; sourceTree = "<group>"; };
+		17D0FC4020AAC7DC00414B8B /* BSUIRSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSUIRSchedule.swift; sourceTree = "<group>"; };
+		27ABB9832B5ACABBC7DF667B /* Pods-BSUIR Shedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSUIR Shedule.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSUIR Shedule/Pods-BSUIR Shedule.release.xcconfig"; sourceTree = "<group>"; };
+		66CEE36FB353CBDFD4881C13 /* Pods-BSUIR Shedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSUIR Shedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSUIR Shedule/Pods-BSUIR Shedule.debug.xcconfig"; sourceTree = "<group>"; };
+		F37E8ACA5DC3B8D4EB1124D4 /* Pods_BSUIR_Shedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSUIR_Shedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CFC5C520BB18430021F5F8 /* Pods_BSUIR_Shedule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,8 +86,11 @@
 		17066101207E1F3700F8C683 = {
 			isa = PBXGroup;
 			children = (
+				17CFC5C420BB18430021F5F8 /* Pods_BSUIR_Shedule.framework */,
 				1706610C207E1F3700F8C683 /* BSUIR Shedule */,
 				1706610B207E1F3700F8C683 /* Products */,
+				41BAEAE60FA121F84144F7F4 /* Frameworks */,
+				9753F513A7B593DC7CC1203D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +110,7 @@
 				171474C520AC021B00340F0D /* View */,
 				171474C620AC024800340F0D /* Controllers */,
 				17066111207E1F3700F8C683 /* Main.storyboard */,
-				17066114207E1F3900F8C683 /* Assets.xcassets */,
+				1746CF4B20BDC5E600D3E168 /* Assets.xcassets */,
 				17066116207E1F3900F8C683 /* LaunchScreen.storyboard */,
 				17066119207E1F3900F8C683 /* Info.plist */,
 			);
@@ -82,9 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				17D0FC3E20AAC6B200414B8B /* JSONStructure.swift */,
+				172045C720BAC4BF00DD71D6 /* Teacher.swift */,
 				1706611F207E1FCB00F8C683 /* Subject.swift */,
 				171474C320AC009800340F0D /* Weekday.swift */,
-				17D0FC4020AAC7DC00414B8B /* BSUIRScheduleData.swift */,
+				17399E1620B542E9004BD921 /* StudentsSchedule.swift */,
+				17D0FC4020AAC7DC00414B8B /* BSUIRSchedule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -93,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				17D0FC3C20AAC1D700414B8B /* StudentsSchaduleTableViewCell.swift */,
+				17399E1020B442F4004BD921 /* StudentsSettingsTableViewCell.swift */,
+				17399E1A20B57884004BD921 /* AddNewScheduleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,8 +145,29 @@
 			children = (
 				1719FE9620B15B71007FBAB0 /* StudentsScheduleViewController.swift */,
 				17893DD620B02D210028A520 /* DetaleStudentsScheduleTableViewController.swift */,
+				17399E1220B44AA7004BD921 /* SettingsViewController.swift */,
+				17399E1820B54F12004BD921 /* AddNewScheduleViewController.swift */,
+				172045C520B9BF4600DD71D6 /* SubgroupSelectionViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		41BAEAE60FA121F84144F7F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17CFC5B820BB175E0021F5F8 /* Pods_BSUIR_Shedule.framework */,
+				F37E8ACA5DC3B8D4EB1124D4 /* Pods_BSUIR_Shedule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9753F513A7B593DC7CC1203D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66CEE36FB353CBDFD4881C13 /* Pods-BSUIR Shedule.debug.xcconfig */,
+				27ABB9832B5ACABBC7DF667B /* Pods-BSUIR Shedule.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,9 +177,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1706611C207E1F3900F8C683 /* Build configuration list for PBXNativeTarget "BSUIR Shedule" */;
 			buildPhases = (
+				60CD7D4D1DA6CEBD5FBF197D /* [CP] Check Pods Manifest.lock */,
 				17066106207E1F3700F8C683 /* Sources */,
 				17066107207E1F3700F8C683 /* Frameworks */,
 				17066108207E1F3700F8C683 /* Resources */,
+				964494A8C080468AF91DEDAE /* [CP] Embed Pods Frameworks */,
+				76A6B1F8D800F27B75800974 /* [CP] Copy Pods Resources */,
+				17CFC5C020BB17FB0021F5F8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,25 +233,86 @@
 			buildActionMask = 2147483647;
 			files = (
 				17066118207E1F3900F8C683 /* LaunchScreen.storyboard in Resources */,
-				17066115207E1F3900F8C683 /* Assets.xcassets in Resources */,
+				1746CF4C20BDC5E700D3E168 /* Assets.xcassets in Resources */,
 				17066113207E1F3700F8C683 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		60CD7D4D1DA6CEBD5FBF197D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BSUIR Shedule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76A6B1F8D800F27B75800974 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BSUIR Shedule/Pods-BSUIR Shedule-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		964494A8C080468AF91DEDAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BSUIR Shedule/Pods-BSUIR Shedule-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Dropdowns/Dropdowns.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dropdowns.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BSUIR Shedule/Pods-BSUIR Shedule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		17066106207E1F3700F8C683 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172045C620B9BF4600DD71D6 /* SubgroupSelectionViewController.swift in Sources */,
+				17399E1B20B57884004BD921 /* AddNewScheduleTableViewCell.swift in Sources */,
 				171474C420AC009800340F0D /* Weekday.swift in Sources */,
-				17D0FC4120AAC7DC00414B8B /* BSUIRScheduleData.swift in Sources */,
+				17D0FC4120AAC7DC00414B8B /* BSUIRSchedule.swift in Sources */,
+				17399E1120B442F4004BD921 /* StudentsSettingsTableViewCell.swift in Sources */,
+				17399E1320B44AA7004BD921 /* SettingsViewController.swift in Sources */,
 				17066120207E1FCB00F8C683 /* Subject.swift in Sources */,
 				17D0FC3F20AAC6B200414B8B /* JSONStructure.swift in Sources */,
+				17399E1720B542E9004BD921 /* StudentsSchedule.swift in Sources */,
 				17D0FC3D20AAC1D700414B8B /* StudentsSchaduleTableViewCell.swift in Sources */,
 				1706610E207E1F3700F8C683 /* AppDelegate.swift in Sources */,
+				17399E1920B54F12004BD921 /* AddNewScheduleViewController.swift in Sources */,
 				17893DD720B02D210028A520 /* DetaleStudentsScheduleTableViewController.swift in Sources */,
+				172045C820BAC4BF00DD71D6 /* Teacher.swift in Sources */,
 				1719FE9720B15B71007FBAB0 /* StudentsScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +455,7 @@
 		};
 		1706611D207E1F3900F8C683 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66CEE36FB353CBDFD4881C13 /* Pods-BSUIR Shedule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -344,6 +474,7 @@
 		};
 		1706611E207E1F3900F8C683 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27ABB9832B5ACABBC7DF667B /* Pods-BSUIR Shedule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

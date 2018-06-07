@@ -7,130 +7,118 @@
 //
 
 import UIKit
+import Dropdowns
 
 class StudentsScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addNewSubject: UIBarButtonItem!
+    
+    var schedule: StudentsSchedule?
+    
+    let selectGroupButton =  UIButton(type: .custom)
+    
+    var titleView: TitleView?
     
     
-    
-    
-    
-    var testSchedule = [Weekday]()
-    
-    var schedule = [Schedule]()
+    override func viewDidAppear(_ animated: Bool) {
+        if BSUIRSchedule.studentsSchedules.isEmpty {
+            addNewSubject.isEnabled = false
+            tableView.isHidden = true
+        } else if BSUIRSchedule.isNeedToReloadTitle {
+            addNewSubject.isEnabled = true
+            tableView.isHidden = false
+            let schedule = BSUIRSchedule.studentsSchedules.filter{$0.title == BSUIRSchedule.selectedGroup}
+            
+            self.schedule = schedule[0]
+            setupTitle()
+            BSUIRSchedule.isNeedToReloadTitle = false
+            print("title reloaded")
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //
-        //        testSchedule.append(Weekday(title: "Понедельник", subjects: [Subject(title: "ОСиСП", auditory: ["210-4"], time: "08:00 - 09:35", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "09:45 - 11:20", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "11:40 - 13:15", employee: "")]))
-        //        testSchedule.append(Weekday(title: "Вторник", subjects: [Subject(title: "ОСиСП", auditory: ["210-4"], time: "08:00 - 09:35", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "09:45 - 11:20", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "11:40 - 13:15", employee: "" )]))
-        //        testSchedule.append(Weekday(title: "Среда", subjects: [Subject(title: "ОСиСП", auditory: ["210-4"], time: "08:00 - 09:35", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "09:45 - 11:20", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "11:40 - 13:15", employee: "" )]))
-        //        testSchedule.append(Weekday(title: "Четверг", subjects: [Subject(title: "ОСиСП", auditory: ["210-4"], time: "08:00 - 09:35", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "09:45 - 11:20", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "11:40 - 13:15", employee: "" )]))
-        //        testSchedule.append(Weekday(title: "Пятница", subjects: [Subject(title: "ОСиСП", auditory: ["210-4"], time: "08:00 - 09:35", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "09:45 - 11:20", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "11:40 - 13:15", employee: "" )]))
-        //        testSchedule.append(Weekday(title: "Суббота", subjects: [Subject(title: "ОСиСП", auditory: ["210-4"], time: "08:00 - 09:35", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "09:45 - 11:20", employee: "" ), Subject(title: "ОСиСП", auditory: ["210-4"], time: "11:40 - 13:15", employee: "" )]))
-        //
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        let urlString = "https://students.bsuir.by/api/v1/studentGroup/schedule?studentGroup=651005"
-        guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data else { return }
-            guard error == nil else { return }
-            do {
-                let groups = try JSONDecoder().decode(List.self, from: data)
-                if let schedules = groups.schedules{
-                    for schedule in schedules{
-                        self.schedule.append(schedule)
-                    }
-                    
-                    
-                    self.testSchedule = []
-                    
-                    
-                    for weekday in self.schedule {
-                        self.testSchedule.append(Weekday(title: weekday.weekDay ?? "", subjects: []))
-                        for subject in weekday.schedule! {
-                            
-                            var auditory = ""
-                            if let auditoryArr = subject.auditory{
-                                for newAuditory in auditoryArr {
-                                    auditory += newAuditory
-                                }
-                            }
-                            
-                            var employee = ""
-                            if let employeeArr = subject.employee{
-                                for newEmployee in employeeArr {
-                                    employee += newEmployee.fio ?? ""
-                                }
-                            }
-                            
-                            
-                            var time = subject.startLessonTime ?? ""
-                            time += " "
-                            time += subject.endLessonTime ?? ""
-                            
-                            
-                            self.testSchedule[self.testSchedule.count - 1].subjects.append(Subject(title: subject.subject ?? "", auditory: auditory, time: time, employee: employee, weekNumber: subject.weekNumber ?? [], subgroup: subject.numSubgroup ?? 0))
-                            
-                            
-                            
-                        }
-                    }
-                    
-                    self.updateUI()
-                    
-                    
-                }
-                print(groups)
-            } catch let error {
-                print(error)
-            }
-            }.resume()
-        
-        
-        //        for i in 0...1000000000{
-        //            print(i)
-        //        }
-        
-        
-        
-        
+        BSUIRSchedule.loadData()
         
     }
     
-    func updateUI() {
-        tableView.reloadData()
+    func updateTitle() {
+        var items = [String]()
+        for schedules in BSUIRSchedule.studentsSchedules {
+            items.append(schedules.title)
+        }
+        let initialIndex = items.index(of: BSUIRSchedule.selectedGroup) ?? 0
+        let contentController = TableController(items: items, initialIndex: initialIndex)
+        let dropdown = DropdownController(contentController: contentController, navigationController: navigationController!)
+        titleView?.dropdown = dropdown
     }
+    
+    func setupTitle() {
+        Config.List.DefaultCell.separatorColor = UIColor.gray
+        Config.List.backgroundColor = UIColor.gray
+        Config.topLineColor = UIColor.gray
+        Config.ArrowButton.Text.color = UIColor.white
+        var items = [String]()
+        for schedules in BSUIRSchedule.studentsSchedules {
+            items.append(schedules.title)
+        }
+        titleView = TitleView(navigationController: navigationController!, title: BSUIRSchedule.selectedGroup, items: items)
+        titleView?.action = { [weak self] index in
+            print("select \(index)")
+            
+            self?.schedule = BSUIRSchedule.studentsSchedules[index]
+            BSUIRSchedule.selectedGroup = (self?.schedule?.title)!
+            BSUIRSchedule.saveSelectedGroup()
+            self?.tableView.reloadData()
+        }
+        navigationItem.titleView = titleView
+    }
+    
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return testSchedule.count
+        return schedule?.schedule.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testSchedule[section].subjects.count
+        return schedule?.schedule[section].subjects.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return testSchedule[section].title
+        return schedule?.schedule[section].title ?? ""
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentsSchaduleTableViewCell") as! StudentsSchaduleTableViewCell
-        let subject = testSchedule[indexPath.section].subjects[indexPath.row]
-        
+        let subject = schedule?.schedule[indexPath.section].subjects[indexPath.row]
         cell.subject = subject
-        
         return cell
+    }
+    
+    @IBAction func unwindToSchedule(sender: UIStoryboardSegue) {
+        print("hui")
+        if let sourceViewController = sender.source as? DetaleStudentsScheduleTableViewController, let weekdaySubject = sourceViewController.weekdaySubject {
+            let queue = DispatchQueue.global(qos: .userInitiated)
+            queue.async {
+                var filteredSchedule = self.schedule?.schedule.filter{ $0.title == weekdaySubject.title}
+                if (filteredSchedule?.isEmpty)! {
+                    self.schedule?.schedule.append(weekdaySubject)
+                    self.schedule?.schedule.sort(by: { $0.titleIndex < $1.titleIndex })
+                } else {
+                    filteredSchedule?[0].subjects.append(weekdaySubject.subjects[0])
+                    if filteredSchedule![0].subjects.count > 2 {
+                        filteredSchedule![0].subjects.sort(by: { $0.timeIndex < $1.timeIndex })
+                    }
+                }
+                BSUIRSchedule.saveData()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
 }

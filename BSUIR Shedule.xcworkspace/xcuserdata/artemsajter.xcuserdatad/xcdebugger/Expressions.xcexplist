@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "StudentsScheduleViewController.viewDidAppear(_:):StudentsScheduleViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "BSUIRSchedule.teachers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in StudentsScheduleViewController.viewDidAppear(_:):StudentsScheduleViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "BSUIRSchedule.teachers">
+            </PersistentString>
+            <PersistentString
+               value = "BSUIRSchedule.selectedGroup">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetaleStudentsScheduleTableViewController.viewDidLoad():DetaleStudentsScheduleTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "BSUIRSchedule.teachers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in StudentsScheduleViewController.viewDidAppear(_:):StudentsScheduleViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "static BSUIRSchedule.loadData():BSUIRSchedule.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "BSUIRSchedule.selectedGroup">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StudentsSchaduleTableViewCell.updateUI():StudentsSchaduleTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "subject">
+            </PersistentString>
+            <PersistentString
+               value = "subject.teachers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
